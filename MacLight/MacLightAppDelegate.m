@@ -34,6 +34,11 @@
 	[self startCapturing:nil];
 }
 
+-(IBAction)closeApp:(id)sender{
+    // Add a delay to ensure that it terminates at the top of the next pass through the event loop
+    [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
+}
+
 
 - (void) loadSerialPortList {
 	io_object_t serialPort;

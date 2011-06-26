@@ -45,5 +45,6 @@
 - (void)stopCapturing;
 - (void) colorPicked:(NSColorWell *) picker;
 - (IBAction) openColorPicker:(id)sender;
-//
+- (IBAction)closeApp:(id)sender;
+
 @end
