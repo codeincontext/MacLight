@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA071F7913B7409D00BB98F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA071F7813B7409D00BB98F9 /* Cocoa.framework */; };
+		DA071F8313B7409D00BB98F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA071F8113B7409D00BB98F9 /* InfoPlist.strings */; };
+		DA071F8613B7409D00BB98F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA071F8513B7409D00BB98F9 /* main.m */; };
+		DA071F8913B7409D00BB98F9 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DA071F8713B7409D00BB98F9 /* Credits.rtf */; };
+		DA071F8C13B7409D00BB98F9 /* MacLightAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA071F8B13B7409D00BB98F9 /* MacLightAppDelegate.m */; };
+		DA071F8F13B7409D00BB98F9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA071F8D13B7409D00BB98F9 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA071F7413B7409D00BB98F9 /* MacLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA071F7813B7409D00BB98F9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DA071F7B13B7409D00BB98F9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DA071F7C13B7409D00BB98F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DA071F7D13B7409D00BB98F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA071F8013B7409D00BB98F9 /* MacLight-Info.plist */ = {isa = PBXFileReference; path = "MacLight-Info.plist"; sourceTree = "<group>"; };
+		DA071F8213B7409D00BB98F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA071F8413B7409D00BB98F9 /* MacLight-Prefix.pch */ = {isa = PBXFileReference; path = "MacLight-Prefix.pch"; sourceTree = "<group>"; };
+		DA071F8513B7409D00BB98F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA071F8813B7409D00BB98F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DA071F8A13B7409D00BB98F9 /* MacLightAppDelegate.h */ = {isa = PBXFileReference; path = MacLightAppDelegate.h; sourceTree = "<group>"; };
+		DA071F8B13B7409D00BB98F9 /* MacLightAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacLightAppDelegate.m; sourceTree = "<group>"; };
+		DA071F8E13B7409D00BB98F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA071F7113B7409D00BB98F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA071F7913B7409D00BB98F9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA071F6913B7409D00BB98F9 = {
+			isa = PBXGroup;
+			children = (
+				DA071F7E13B7409D00BB98F9 /* MacLight */,
+				DA071F7713B7409D00BB98F9 /* Frameworks */,
+				DA071F7513B7409D00BB98F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA071F7513B7409D00BB98F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA071F7413B7409D00BB98F9 /* MacLight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA071F7713B7409D00BB98F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA071F7813B7409D00BB98F9 /* Cocoa.framework */,
+				DA071F7A13B7409D00BB98F9 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA071F7A13B7409D00BB98F9 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA071F7B13B7409D00BB98F9 /* AppKit.framework */,
+				DA071F7C13B7409D00BB98F9 /* CoreData.framework */,
+				DA071F7D13B7409D00BB98F9 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DA071F7E13B7409D00BB98F9 /* MacLight */ = {
+			isa = PBXGroup;
+			children = (
+				DA071F8A13B7409D00BB98F9 /* MacLightAppDelegate.h */,
+				DA071F8B13B7409D00BB98F9 /* MacLightAppDelegate.m */,
+				DA071F8D13B7409D00BB98F9 /* MainMenu.xib */,
+				DA071F7F13B7409D00BB98F9 /* Supporting Files */,
+			);
+			path = MacLight;
+			sourceTree = "<group>";
+		};
+		DA071F7F13B7409D00BB98F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA071F8013B7409D00BB98F9 /* MacLight-Info.plist */,
+				DA071F8113B7409D00BB98F9 /* InfoPlist.strings */,
+				DA071F8413B7409D00BB98F9 /* MacLight-Prefix.pch */,
+				DA071F8513B7409D00BB98F9 /* main.m */,
+				DA071F8713B7409D00BB98F9 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA071F7313B7409D00BB98F9 /* MacLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA071F9213B7409D00BB98F9 /* Build configuration list for PBXNativeTarget "MacLight" */;
+			buildPhases = (
+				DA071F7013B7409D00BB98F9 /* Sources */,
+				DA071F7113B7409D00BB98F9 /* Frameworks */,
+				DA071F7213B7409D00BB98F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacLight;
+			productName = MacLight;
+			productReference = DA071F7413B7409D00BB98F9 /* MacLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA071F6B13B7409D00BB98F9 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = DA071F6E13B7409D00BB98F9 /* Build configuration list for PBXProject "MacLight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA071F6913B7409D00BB98F9;
+			productRefGroup = DA071F7513B7409D00BB98F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA071F7313B7409D00BB98F9 /* MacLight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA071F7213B7409D00BB98F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA071F8313B7409D00BB98F9 /* InfoPlist.strings in Resources */,
+				DA071F8913B7409D00BB98F9 /* Credits.rtf in Resources */,
+				DA071F8F13B7409D00BB98F9 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA071F7013B7409D00BB98F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA071F8613B7409D00BB98F9 /* main.m in Sources */,
+				DA071F8C13B7409D00BB98F9 /* MacLightAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA071F8113B7409D00BB98F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA071F8213B7409D00BB98F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA071F8713B7409D00BB98F9 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA071F8813B7409D00BB98F9 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DA071F8D13B7409D00BB98F9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA071F8E13B7409D00BB98F9 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA071F9013B7409D00BB98F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DA071F9113B7409D00BB98F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DA071F9313B7409D00BB98F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacLight/MacLight-Prefix.pch";
+				INFOPLIST_FILE = "MacLight/MacLight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA071F9413B7409D00BB98F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacLight/MacLight-Prefix.pch";
+				INFOPLIST_FILE = "MacLight/MacLight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA071F6E13B7409D00BB98F9 /* Build configuration list for PBXProject "MacLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA071F9013B7409D00BB98F9 /* Debug */,
+				DA071F9113B7409D00BB98F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA071F9213B7409D00BB98F9 /* Build configuration list for PBXNativeTarget "MacLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA071F9313B7409D00BB98F9 /* Debug */,
+				DA071F9413B7409D00BB98F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA071F6B13B7409D00BB98F9 /* Project object */;
+}
