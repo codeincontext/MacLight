@@ -292,6 +292,7 @@
 				DA071F9413B7409D00BB98F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

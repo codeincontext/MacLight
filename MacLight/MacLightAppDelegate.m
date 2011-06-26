@@ -19,11 +19,9 @@
     [statusItem setMenu:statusMenu];
     [statusItem setTitle:@"MacLight"];
     [statusItem setHighlightMode:YES];
-
 	// we don't have a serial port open yet
 	serialFileDescriptor = -1;
 	
-	// first thing is to refresh the serial port list
 	[self loadSerialPortList];
     
     for (NSString *serialPort in serialPortList) {
@@ -53,11 +51,7 @@
         
 		IOObjectRelease(serialPort);
 	}
-	
-	// add the selected text to the top
-//	[serialListPullDown insertItemWithTitle:selectedText atIndex:0];
-//	[serialListPullDown selectItemAtIndex:0];
-	
+		
 	IOObjectRelease(serialPortIterator);
 }
 
@@ -71,18 +65,23 @@
 
 - (IBAction)startCapturing:(id)sender
 {
-	// Create a screen reader object
-	mOpenGLScreenReader = [[OpenGLScreenReader alloc] init];
+    [captureMenuItem setState:NSOnState];
+    [manualMenuItem setState:NSOffState];
+    mOpenGLScreenReader = [[OpenGLScreenReader alloc] init];
 	NSAssert( mOpenGLScreenReader != 0, @"OpenGLScreenReader alloc failed");
 	
 	sampleTimer = [[NSTimer scheduledTimerWithTimeInterval:1.0f/1000.f target:self selector:@selector(sampleScreen) userInfo:nil repeats:YES] retain];
 }
 
-- (IBAction)stopCapturing:(id)sender {
-    
+- (void)stopCapturing {
+    if (sampleTimer) {
+        [captureMenuItem setState:NSOffState];
+        [manualMenuItem setState:NSOnState];
+        [sampleTimer invalidate];
+        sampleTimer = nil;
+    }
 }
-
-
+    
 // open the serial port
 //   - nil is returned on success
 //   - an error message is returned otherwise
@@ -187,9 +186,6 @@
     
     val = [color blueComponent]*255;
     [self writeByte:&val];
-    
-//    [_colorView setBackgroundColor:color];
-//    [_colorView setNeedsDisplay:YES];
 }
 
 - (void) writeByte: (uint8_t *) val {
@@ -200,13 +196,17 @@
 	}
 }
 
-
-- (IBAction) colorPicked: (NSColorWell *) picker{
-	NSLog(@"Color picked");
-    [self writeColor:picker.color];
+- (IBAction) openColorPicker:(id)sender {
+    [NSApp activateIgnoringOtherApps:YES];
+    [[NSColorPanel sharedColorPanel] setTarget:self];
+	[[NSColorPanel sharedColorPanel] setAction:@selector(colorPicked:)];
+	[[NSColorPanel sharedColorPanel] makeKeyAndOrderFront:nil];
 }
 
-
+- (void) colorPicked: (NSColorWell *) picker{
+    [self stopCapturing];
+    [self writeColor:picker.color];
+}
 
 // action sent when serial port selected
 - (IBAction) serialPortSelected: (id) cntrl {

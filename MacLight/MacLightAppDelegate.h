@@ -23,17 +23,17 @@
     NSWindow *window;
     IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
+    IBOutlet NSMenuItem *captureMenuItem;
+    IBOutlet NSMenuItem *manualMenuItem;
     
     NSString *selectedSerialPort;
     NSMutableArray *serialPortList;
     OpenGLScreenReader *mOpenGLScreenReader;
-//	
-//	IBOutlet NSPopUpButton *serialListPullDown;
-//	IBOutlet ColorElement *_colorView;
+    
 	struct termios gOriginalTTYAttrs; // Hold the original termios attributes so we can reset them on quit ( best practice )
 	int serialFileDescriptor; // file handle to the serial port
-//	bool readThreadRunning;
     NSTimer *sampleTimer;
+    bool capturing;
 }
 //
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
@@ -42,7 +42,8 @@
 - (void) writeByte: (uint8_t *) val;
 - (void) sampleScreen;
 - (IBAction)startCapturing:(id)sender;
-//- (IBAction) serialPortSelected: (id) cntrl;
-- (IBAction) colorPicked: (NSColorWell *) picker;
+- (void)stopCapturing;
+- (void) colorPicked:(NSColorWell *) picker;
+- (IBAction) openColorPicker:(id)sender;
 //
 @end
