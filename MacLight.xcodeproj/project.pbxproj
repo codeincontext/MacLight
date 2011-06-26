@@ -13,6 +13,9 @@
 		DA071F8913B7409D00BB98F9 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DA071F8713B7409D00BB98F9 /* Credits.rtf */; };
 		DA071F8C13B7409D00BB98F9 /* MacLightAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA071F8B13B7409D00BB98F9 /* MacLightAppDelegate.m */; };
 		DA071F8F13B7409D00BB98F9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA071F8D13B7409D00BB98F9 /* MainMenu.xib */; };
+		DA071FA513B7490900BB98F9 /* OpenGLScreenReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA071FA413B7490900BB98F9 /* OpenGLScreenReader.m */; };
+		DA071FA713B753C000BB98F9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA071FA613B753C000BB98F9 /* IOKit.framework */; };
+		DA071FA913B753CC00BB98F9 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA071FA813B753CC00BB98F9 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +24,18 @@
 		DA071F7B13B7409D00BB98F9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		DA071F7C13B7409D00BB98F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DA071F7D13B7409D00BB98F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DA071F8013B7409D00BB98F9 /* MacLight-Info.plist */ = {isa = PBXFileReference; path = "MacLight-Info.plist"; sourceTree = "<group>"; };
+		DA071F8013B7409D00BB98F9 /* MacLight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacLight-Info.plist"; sourceTree = "<group>"; };
 		DA071F8213B7409D00BB98F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DA071F8413B7409D00BB98F9 /* MacLight-Prefix.pch */ = {isa = PBXFileReference; path = "MacLight-Prefix.pch"; sourceTree = "<group>"; };
+		DA071F8413B7409D00BB98F9 /* MacLight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacLight-Prefix.pch"; sourceTree = "<group>"; };
 		DA071F8513B7409D00BB98F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA071F8813B7409D00BB98F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		DA071F8A13B7409D00BB98F9 /* MacLightAppDelegate.h */ = {isa = PBXFileReference; path = MacLightAppDelegate.h; sourceTree = "<group>"; };
+		DA071F8A13B7409D00BB98F9 /* MacLightAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacLightAppDelegate.h; sourceTree = "<group>"; };
 		DA071F8B13B7409D00BB98F9 /* MacLightAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacLightAppDelegate.m; sourceTree = "<group>"; };
 		DA071F8E13B7409D00BB98F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DA071FA313B7490900BB98F9 /* OpenGLScreenReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLScreenReader.h; sourceTree = "<group>"; };
+		DA071FA413B7490900BB98F9 /* OpenGLScreenReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLScreenReader.m; sourceTree = "<group>"; };
+		DA071FA613B753C000BB98F9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		DA071FA813B753CC00BB98F9 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA071FA913B753CC00BB98F9 /* OpenGL.framework in Frameworks */,
+				DA071FA713B753C000BB98F9 /* IOKit.framework in Frameworks */,
 				DA071F7913B7409D00BB98F9 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +55,8 @@
 		DA071F6913B7409D00BB98F9 = {
 			isa = PBXGroup;
 			children = (
+				DA071FA813B753CC00BB98F9 /* OpenGL.framework */,
+				DA071FA613B753C000BB98F9 /* IOKit.framework */,
 				DA071F7E13B7409D00BB98F9 /* MacLight */,
 				DA071F7713B7409D00BB98F9 /* Frameworks */,
 				DA071F7513B7409D00BB98F9 /* Products */,
@@ -85,6 +96,8 @@
 				DA071F8A13B7409D00BB98F9 /* MacLightAppDelegate.h */,
 				DA071F8B13B7409D00BB98F9 /* MacLightAppDelegate.m */,
 				DA071F8D13B7409D00BB98F9 /* MainMenu.xib */,
+				DA071FA313B7490900BB98F9 /* OpenGLScreenReader.h */,
+				DA071FA413B7490900BB98F9 /* OpenGLScreenReader.m */,
 				DA071F7F13B7409D00BB98F9 /* Supporting Files */,
 			);
 			path = MacLight;
@@ -164,6 +177,7 @@
 			files = (
 				DA071F8613B7409D00BB98F9 /* main.m in Sources */,
 				DA071F8C13B7409D00BB98F9 /* MacLightAppDelegate.m in Sources */,
+				DA071FA513B7490900BB98F9 /* OpenGLScreenReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
