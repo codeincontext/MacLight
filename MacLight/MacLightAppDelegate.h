@@ -24,6 +24,7 @@
     NSStatusItem *statusItem;
     IBOutlet NSMenuItem *captureMenuItem;
     IBOutlet NSMenuItem *manualMenuItem;
+    IBOutlet NSMenuItem *startupMenuItem;
     
     NSString *selectedSerialPort;
     NSMutableArray *serialPortList;
@@ -44,5 +45,8 @@
 - (void) colorPicked:(NSColorWell *) picker;
 - (IBAction) openColorPicker:(id)sender;
 - (IBAction)closeApp:(id)sender;
+- (IBAction)toggleLaunchAtStartup:(id)sender;
+- (LSSharedFileListItemRef)itemRefInLoginItems;
+- (BOOL)isLaunchAtStartup;
 
 @end
