@@ -20,7 +20,6 @@
 
 @interface MacLightAppDelegate : NSObject <NSApplicationDelegate> {
 @private
-    NSWindow *window;
     IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
     IBOutlet NSMenuItem *captureMenuItem;
@@ -33,7 +32,6 @@
 	struct termios gOriginalTTYAttrs; // Hold the original termios attributes so we can reset them on quit ( best practice )
 	int serialFileDescriptor; // file handle to the serial port
     NSTimer *sampleTimer;
-    bool capturing;
 }
 //
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
