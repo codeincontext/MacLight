@@ -75,7 +75,7 @@
     mOpenGLScreenReader = [[OpenGLScreenReader alloc] init];
 	NSAssert( mOpenGLScreenReader != 0, @"OpenGLScreenReader alloc failed");
 	
-	sampleTimer = [[NSTimer scheduledTimerWithTimeInterval:1.0f/1000.f target:self selector:@selector(sampleScreen) userInfo:nil repeats:YES] retain];
+	sampleTimer = [[NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f target:self selector:@selector(sampleScreen) userInfo:nil repeats:YES] retain];
 }
 
 - (void)stopCapturing {
