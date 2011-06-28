@@ -83,7 +83,11 @@
         [captureMenuItem setState:NSOffState];
         [manualMenuItem setState:NSOnState];
         [sampleTimer invalidate];
+        [sampleTimer release];
         sampleTimer = nil;
+        if (mOpenGLScreenReader)
+            [mOpenGLScreenReader release];
+            mOpenGLScreenReader = nil;
     }
 }
     
