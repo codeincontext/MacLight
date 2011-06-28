@@ -48,27 +48,27 @@
 				<string key="NSTitle"/>
 				<object class="NSMutableArray" key="NSMenuItems">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="NSMenuItem" id="301146226">
-						<reference key="NSMenu" ref="78879336"/>
-						<string key="NSTitle">Manual Color</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<object class="NSCustomResource" key="NSOnImage" id="442263729">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">NSMenuCheckmark</string>
-						</object>
-						<object class="NSCustomResource" key="NSMixedImage" id="504395209">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">NSMenuMixedState</string>
-						</object>
-					</object>
 					<object class="NSMenuItem" id="410042988">
 						<reference key="NSMenu" ref="78879336"/>
 						<string key="NSTitle">Screen Average</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="442263729"/>
-						<reference key="NSMixedImage" ref="504395209"/>
+						<object class="NSCustomResource" key="NSOnImage" id="426688586">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NSMenuCheckmark</string>
+						</object>
+						<object class="NSCustomResource" key="NSMixedImage" id="1055795587">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NSMenuMixedState</string>
+						</object>
+					</object>
+					<object class="NSMenuItem" id="301146226">
+						<reference key="NSMenu" ref="78879336"/>
+						<string key="NSTitle">Pick Color</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="426688586"/>
+						<reference key="NSMixedImage" ref="1055795587"/>
 					</object>
 					<object class="NSMenuItem" id="630063515">
 						<reference key="NSMenu" ref="78879336"/>
@@ -77,16 +77,16 @@
 						<string key="NSTitle"/>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="442263729"/>
-						<reference key="NSMixedImage" ref="504395209"/>
+						<reference key="NSOnImage" ref="426688586"/>
+						<reference key="NSMixedImage" ref="1055795587"/>
 					</object>
 					<object class="NSMenuItem" id="773376709">
 						<reference key="NSMenu" ref="78879336"/>
 						<string key="NSTitle">Quit</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="442263729"/>
-						<reference key="NSMixedImage" ref="504395209"/>
+						<reference key="NSOnImage" ref="426688586"/>
+						<reference key="NSMixedImage" ref="1055795587"/>
 					</object>
 				</object>
 			</object>
@@ -185,10 +185,10 @@
 						<reference key="object" ref="78879336"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="410042988"/>
 							<reference ref="301146226"/>
 							<reference ref="773376709"/>
 							<reference ref="630063515"/>
+							<reference ref="410042988"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
