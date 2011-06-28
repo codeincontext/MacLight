@@ -39,7 +39,7 @@
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
 - (void) loadSerialPortList;
 - (void) writeColor: (NSColor *)color;
-- (void) writeByte: (uint8_t *) val;
+- (void) writeByte: (int) val;
 - (void) sampleScreen;
 - (IBAction)startCapturing:(id)sender;
 - (void)stopCapturing;

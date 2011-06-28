@@ -183,19 +183,23 @@
 }
 
 - (void) writeColor: (NSColor *) color {
-    uint8_t val = [color redComponent]*255*0.9;
-    [self writeByte:&val];
+    [self writeByte:0x55];    
+    [self writeByte:0xAA];
+    
+    int val;
+    val = [color redComponent]*255*0.9;
+    [self writeByte:val];
     
     val = [color greenComponent]*255;
-    [self writeByte:&val];
+    [self writeByte:val];
     
     val = [color blueComponent]*255;
-    [self writeByte:&val];
+    [self writeByte:val];
 }
 
-- (void) writeByte: (uint8_t *) val {
+- (void) writeByte: (int)val {
 	if(serialFileDescriptor!=-1) {
-		write(serialFileDescriptor, val, 1);
+		write(serialFileDescriptor, &val, 1);
 	} else {
 		NSLog(@"no Serial Port");
 	}
