@@ -81,7 +81,9 @@
 // Use this routine if you want to read only a portion of the screen pixels
 - (NSColor *)readPartialScreenToBuffer: (size_t) width bufferHeight:(size_t) height bufferBaseAddress: (void *)baseAddress
 {
-	
+    // Set our context as the current OpenGL context
+    [mGLContext makeCurrentContext];
+    
     // select front buffer as our source for pixel data
     glReadBuffer(GL_FRONT);
     
