@@ -330,6 +330,7 @@ CVReturn DisplayLinkCallback (
     // Release the LoginItems lists.
     [loginItems release];
     CFRelease(loginItemsRef);
+    [appUrl release];
     
     return itemRef;
 }
