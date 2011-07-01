@@ -37,6 +37,27 @@
 	[self startCapturing:nil];
 }
 
+
+CVReturn DisplayLinkCallback (
+                                CVDisplayLinkRef displayLink,
+                                const CVTimeStamp *inNow,
+                                const CVTimeStamp *inOutputTime,
+                                CVOptionFlags flagsIn,
+                                CVOptionFlags *flagsOut,
+                                void *displayLinkContext)
+{
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    [(MacLightAppDelegate*) displayLinkContext sampleScreen];
+    [pool release];
+    return YES;
+}
+
+- (void)dealloc {
+    CVDisplayLinkStop(displayLink);
+    [super dealloc];
+}
+
+
 -(IBAction)closeApp:(id)sender{
     // Add a delay to ensure that it terminates at the top of the next pass through the event loop
     [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
@@ -65,8 +86,8 @@
 
 
 - (void)sampleScreen {
+    NSAssert(mOpenGLScreenReader, @"No screen reader");
 	NSColor *averageCol = [mOpenGLScreenReader readFullScreenToBuffer];
-    
     [self writeColor:averageCol];
 }
 
@@ -75,13 +96,27 @@
 {
     [captureMenuItem setState:NSOnState];
     [manualMenuItem setState:NSOffState];
-    mOpenGLScreenReader = [[OpenGLScreenReader alloc] init];
+    
+    mOpenGLScreenReader = [[[OpenGLScreenReader alloc] init] retain];
 	NSAssert( mOpenGLScreenReader != 0, @"OpenGLScreenReader alloc failed");
-	
-	sampleTimer = [[NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f target:self selector:@selector(sampleScreen) userInfo:nil repeats:YES] retain];
+    
+    CVReturn            error = kCVReturnSuccess;
+    CGDirectDisplayID   displayID = CGMainDisplayID();
+    
+    error = CVDisplayLinkCreateWithCGDisplay(displayID, &displayLink);
+    if(error)
+    {
+        NSLog(@"DisplayLink created with error:%d", error);
+        displayLink = NULL;
+    }
+    error = CVDisplayLinkSetOutputCallback(displayLink, DisplayLinkCallback, self);
+    
+    CVDisplayLinkStart(displayLink);
 }
 
 - (void)stopCapturing {
+    CVDisplayLinkStop(displayLink);
+    
     if (sampleTimer) {
         [captureMenuItem setState:NSOffState];
         [manualMenuItem setState:NSOnState];

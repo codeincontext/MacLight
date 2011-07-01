@@ -16,6 +16,7 @@
 		DA071FA513B7490900BB98F9 /* OpenGLScreenReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA071FA413B7490900BB98F9 /* OpenGLScreenReader.m */; };
 		DA071FA713B753C000BB98F9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA071FA613B753C000BB98F9 /* IOKit.framework */; };
 		DA071FA913B753CC00BB98F9 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA071FA813B753CC00BB98F9 /* OpenGL.framework */; };
+		DADAE65B13BCA28400DEEDA7 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADAE65A13BCA28400DEEDA7 /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DA071FA413B7490900BB98F9 /* OpenGLScreenReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLScreenReader.m; sourceTree = "<group>"; };
 		DA071FA613B753C000BB98F9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		DA071FA813B753CC00BB98F9 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		DADAE65A13BCA28400DEEDA7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADAE65B13BCA28400DEEDA7 /* CoreVideo.framework in Frameworks */,
 				DA071FA913B753CC00BB98F9 /* OpenGL.framework in Frameworks */,
 				DA071FA713B753C000BB98F9 /* IOKit.framework in Frameworks */,
 				DA071F7913B7409D00BB98F9 /* Cocoa.framework in Frameworks */,
@@ -55,6 +58,7 @@
 		DA071F6913B7409D00BB98F9 = {
 			isa = PBXGroup;
 			children = (
+				DADAE65A13BCA28400DEEDA7 /* CoreVideo.framework */,
 				DA071F7E13B7409D00BB98F9 /* MacLight */,
 				DA071F7713B7409D00BB98F9 /* Frameworks */,
 				DA071F7513B7409D00BB98F9 /* Products */,

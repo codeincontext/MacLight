@@ -33,6 +33,8 @@
 	struct termios gOriginalTTYAttrs; // Hold the original termios attributes so we can reset them on quit ( best practice )
 	int serialFileDescriptor; // file handle to the serial port
     NSTimer *sampleTimer;
+
+    CVDisplayLinkRef displayLink;
 }
 //
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
@@ -50,3 +52,11 @@
 - (BOOL)isLaunchAtStartup;
 
 @end
+
+CVReturn DisplayLinkCallback (
+                                CVDisplayLinkRef displayLink,
+                                const CVTimeStamp *inNow,
+                                const CVTimeStamp *inOutputTime,
+                                CVOptionFlags flagsIn,
+                                CVOptionFlags *flagsOut,
+                                void *displayLinkContext);
