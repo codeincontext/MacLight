@@ -142,8 +142,6 @@
 	int32_t avRed = (sumRed / sampleCount) & 0x000000ff;
 	int32_t avGreen = (sumGreen / sampleCount) & 0x000000ff;
 	int32_t avBlue = (sumBlue / sampleCount) & 0x000000ff;
-
-	return [NSColor colorWithDeviceRed: avRed/255.0 green: avGreen/255.0 blue: avBlue/255.0 alpha: 1.0];
 			
     glPopClientAttrib();
 
@@ -151,6 +149,8 @@
     GLenum theError = GL_NO_ERROR;
     theError = glGetError();
     NSAssert( theError == GL_NO_ERROR, @"OpenGL error 0x%04X", theError);
+    
+    return [NSColor colorWithDeviceRed: avRed/255.0 green: avGreen/255.0 blue: avBlue/255.0 alpha: 1.0];
 }
 
 
