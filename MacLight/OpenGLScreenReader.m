@@ -113,10 +113,10 @@
 	NSAssert( skipFactor > 0, @"accuraccy below 1");
 	
 	
-	NSInteger topMargin = 200;
-	NSInteger bottomMargin = 200;
-	NSInteger leftMargin = 200;
-	NSInteger rightMargin = 200;
+	int topMargin = 200;
+	int bottomMargin = 200;
+	int leftMargin = 200;
+	int rightMargin = 200;
 	
 	NSInteger yPixels = height - topMargin - bottomMargin;
 	NSInteger xPixels = width - leftMargin - rightMargin;
