@@ -28,7 +28,7 @@
 	[self loadSerialPortList];
     
     for (NSString *serialPort in serialPortList) {
-        if ([serialPort rangeOfString:@"usbserial"].location != NSNotFound) {
+        if ([serialPort rangeOfString:@"usbserial"].location != NSNotFound || [serialPort rangeOfString:@"usbmodem"].location != NSNotFound) {
             selectedSerialPort = serialPort;
         }
     }
