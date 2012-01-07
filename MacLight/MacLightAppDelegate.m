@@ -28,8 +28,10 @@
 	[self loadSerialPortList];
     
     for (NSString *serialPort in serialPortList) {
+        NSLog(@"Found a port: %@", serialPort);
         if ([serialPort rangeOfString:@"usbserial"].location != NSNotFound || [serialPort rangeOfString:@"usbmodem"].location != NSNotFound) {
             selectedSerialPort = serialPort;
+            NSLog(@"Found an arduino: %@", serialPort);
         }
     }
     [self openSerialPort: selectedSerialPort baud:9600];
