@@ -112,8 +112,15 @@ CVReturn DisplayLinkCallback (
         displayLink = NULL;
     }
     error = CVDisplayLinkSetOutputCallback(displayLink, DisplayLinkCallback, self);
+    if(error)
+    {
+        NSLog(@"DisplayLink callback creation failed with error:%d", error);
+        displayLink = NULL;
+    }
     
-    CVDisplayLinkStart(displayLink);
+    if (displayLink){
+        CVDisplayLinkStart(displayLink);
+    }
 }
 
 - (void)stopCapturing {
