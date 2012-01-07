@@ -252,7 +252,7 @@ CVReturn DisplayLinkCallback (
 	if(serialFileDescriptor!=-1) {
 		write(serialFileDescriptor, &val, 1);
 	} else {
-		NSLog(@"no Serial Port");
+		NSLog(@"Tried to write byte but no Serial Port found");
 	}
 }
 
