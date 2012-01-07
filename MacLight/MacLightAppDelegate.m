@@ -132,9 +132,10 @@ CVReturn DisplayLinkCallback (
         [sampleTimer invalidate];
         [sampleTimer release];
         sampleTimer = nil;
-        if (mOpenGLScreenReader)
+        if (mOpenGLScreenReader){
             [mOpenGLScreenReader release];
             mOpenGLScreenReader = nil;
+        }
     }
 }
     
