@@ -1,11 +1,10 @@
 MacLight
 --------------
 
-Fully working and ready for your use, but very much undocumented.
+Ready for your use, but very much undocumented.
 
-#### Download Link:
-http://cl.ly/80ZF
-
+#### PROBLEMS:
+There is an issue with screen capturing in Lion. See issue #1. It is fixable, but I haven't personally had the time yet.
 
 #### TODO:
 * Allow user to select a serial port. Currently default to first arduino found
