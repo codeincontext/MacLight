@@ -45,7 +45,7 @@
 - (IBAction)startCapturing:(id)sender;
 - (void)stopCapturing;
 - (void) colorPicked:(NSColorWell *) picker;
-- (IBAction) openColorPicker:(id)sender;
+- (IBAction)openColorPicker:(id)sender;
 - (IBAction)closeApp:(id)sender;
 - (IBAction)toggleLaunchAtStartup:(id)sender;
 - (LSSharedFileListItemRef)itemRefInLoginItems;
