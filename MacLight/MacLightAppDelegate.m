@@ -36,7 +36,7 @@
     }
     [self openSerialPort: selectedSerialPort baud:9600];
     
-	[self startCapturing:nil];
+//	[self startCapturing:nil];
 }
 
 
